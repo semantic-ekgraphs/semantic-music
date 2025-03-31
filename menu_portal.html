@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400" rel="stylesheet">
+    <!-- required -->
+    <link rel="stylesheet" type="text/css" media="all" href="menu/css/stellarnav.css">
+    <!-- required -->
+<style>
+/* styles for this sample only */
+*{ margin: 0; padding: 0; }
+body { font-size: 16px; font-family: 'Exo 2', sans-serif; color: #555; top: 0px; position: fixed }
+.header { text-align: center; }
+.header a { padding: 30px 0 0; display: block; font-size: 48px; text-decoration: none; color: #555; }
+.header p { margin: 10px 0 40px 0; font-size: 18px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.posfix {top: 0px; position: fixed; z-index: 100;}
+@media only screen and (max-width : 1000px) {
+    .stellarnav > ul > li > a { padding: 20px 23px; }
+}
+/* styles for this sample only */
+</style>
+
+
+</head>
+
+
+<body>
+    <div id='menu_custom_div_sticky' class="stellarnav">
+        <ul id="menu-main-menu" class="menu">
+                    <li>
+                       <a href="index.html"><span>Início</span></a>
+      
+                    </li>
+
+                    <li>
+                        <a href="camada_fontes.html"><span>Fontes de Dados</span></a>
+                        <ul class="sub-menu">
+                            <!--<li>
+                                 <a href="camada_relacional.html"><span>O que é a Camada Relacional?</span></a>
+                             </li>
+                             <li>-->
+                                 <!--<a href="visoes_relacionais.html"><span>Visões Relacionais</span></a>
+                                 <ul class="sub-menu">-->
+                                    <li>
+                                        <a href="dbpedia_fonte.html"><span>DBPEDIA</span></a>   
+                                        <ul>
+                                            <li>
+                                                <a target='_' href="https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/consultas-cnpj"><span>Fonte Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/70dc5895491260e2e9b629308b7f9af722f0dc7e/Arquivos/Camada%20Fontes/DBPEDIA/Layout_Dicionario/Layout.pdf"><span>Dicionário / Layout</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/70dc5895491260e2e9b629308b7f9af722f0dc7e/Arquivos/Camada%20Fontes/DBPEDIA/Diagrama/Diagrama%20de%20Extracao%20DBPEDIA.pdf"><span>Esquema</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/70dc5895491260e2e9b629308b7f9af722f0dc7e/Arquivos/Camada%20Fontes/DBPEDIA/Scripts%20SQL/scripts.zip"><span>Script</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="musicbrainz_fonte.html"><span>MUSICBRAINZ</span></a>   
+                                        <ul>
+                                            <li>
+                                                <a target='_' href="https://contas.musicbrainz.gov.br/ords/f?p=704144:1:12037056698146::NO:1::"><span>Fonte Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Fontes/MUSICBRAINZ/Layout_Dicionario/Layout.pdf"><span>Dicionário / Layout</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Fontes/MUSICBRAINZ/Diagrama/Diagrama.svg"><span>Esquema</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Fontes/MUSICBRAINZ/Script/Script.7z"><span>Script</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                <!--- </ul>
+                             </li>-->
+                         </ul>
+                     </li>
+
+                    <li>
+                        <a href="camada_semantica.html"><span>Visão Semântica</span></a>
+                        <ul class="sub-menu">
+                           <!--- <li>
+                                <a href="visao_semantica.html"><span>O que é a Camada Semântica</span></a>
+                            </li>-->
+                            <li>
+                                <a href="ontologia_visao_semantica.html"><span>Ontologia da Visão Semântica (SVO)</span></a>
+                            </li>
+                
+      
+                            <li>
+                                <a href="grafos_locais.html"><span>Visões Semânticas Exportadas</span></a>
+                                <ul class="sub-menu">
+                                    
+                                <!-- DBPEDIA-->
+                                <li>
+                                        <a href="dbpedia.html"><span>DBPEDIA</span></a>
+                                <ul class="sub-menu">
+                                <li>
+                                    <a href="./dbpedia_relacional.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="odbpedia.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20DBPEDIA/Ontologia%20Local/Diagrama%20de%20Classes/Diagrama_Ontologia_DBPEDIA.drawio.svg"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20DBPEDIA/Ontologia%20Local/OWL/DBPEDIA.ttl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-cnpj.github.io/Semantic-CNPJ/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20DBPEDIA/Ontologia%20Local/Especificacao/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20DBPEDIA/Mapeamentos/DBPEDIA.ttl"><span>Mapeamentos</span></a>
+                                </li>
+                               <!-- <li>
+                                    <a target="_" href="http://10.33.96.18:7200/graphs-visualizations?uri=http:%2F%2Fwww.arida.ufc.br%2FVEKG%23VSL_DBPEDIA"><span>Grafo - Visão Semântica (DBPEDIA)</span></a>
+                                </li>-->
+                            </ul>
+                            </li>
+                        
+                            
+
+                            <li>
+                                    <a href="musicbrainz.html"><span>MUSICBRAINZ</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./musicbrainz_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="omusicbrainz.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20MUSICBRAINZ/Ontologia%20Local/Diagrama%20de%20Classes/Diagrama_Ontologia_MUSICBRAINZ.drawio.svg"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20MUSICBRAINZ/Ontologia%20Local/OWL/MUSICBRAINZ.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-cnpj.github.io/Semantic-CNPJ/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20MUSICBRAINZ/Ontologia%20Local/Especificacao/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20MUSICBRAINZ/Mapeamentos/MUSICBRAINZ.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+
+                              <!--  <li>
+                                    <a target="_" href=".html"><span>Grafo - Visão Semântica (MUSICBRAINZ)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+                        </ul>
+                            <li>
+                                <a href="./visoes_ligacoes_semanticas.html"><span>Visões de Ligação Semânticas</span></a>
+                            </li>
+                            <li>
+                                <a href="./visao_unificacao.html"><span>Visão de Unificação</span></a>
+                            </li>
+
+                            <li>
+                                <a href="./visao_fusao.html"><span>Visão de Fusão</span></a>
+                            </li>
+                        
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="camada_acesso_integracao.html"><span>Camada de Acesso e Integração</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a target="_" href="http://200.19.182.252:8080/graphdb"><span>Endpoint</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="camada_aplicacoes.html"><span>Camada de Aplicações</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a target="_" href="http://10.33.96.18:1235"><span>Consulta</span></a>
+                            </li>
+                            <li>
+                                <a target="_" href="http://10.33.96.18:1111/"><span>Consulta ao Grafo</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                      <!--  <a target="_" href="catalogo.html"><span>Questões de Competência</span></a>-->
+                    </li>
+
+                  
+
+                    <!--<li>-->
+                    <!--    <a href="camada_acesso_integracao.html"><span>Camada de Acesso e Integração</span></a>
+                    </li>-->
+
+
+                    <!--<li>
+                        <a href="consultas.html"><span>Consulta Semântica</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                        <a href="consultas_sparql.html"><span>Consultas SPARQL</span></a>
+                            </li>
+                            <li>
+                                        <a href="consultas_facetadas.html"><span>Consultas Facetadas</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                -->
+                    
+                   <!-- <li>
+                        <a href="mediador.html"><span>Aplicações Inteligentes</span></a>
+                    </li>-->
+                </ul>
+</div><!-- .stellarnav -->
+
+    <script type='text/javascript'>
+        document.addEventListener("DOMContentLoaded", function(){
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 205) {
+                    document.getElementById('menu_custom_div_sticky').classList.add('posfix');
+                } else {
+                    document.getElementById('menu_custom_div_sticky').classList.remove('posfix');
+                } 
+            });
+        }); 
+    </script>
+    <!-- required -->
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type="text/javascript" src="menu/js/stellarnav.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            jQuery('.stellarnav').stellarNav({
+                theme: 'dark',
+                breakpoint: 960,
+                position: 'right',
+                phoneBtn: '18009997788',
+                locationBtn: 'https://www.google.com/maps'
+            });
+        });
+
+    </script>
+    <!-- required -->
+
+    
+
+    <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+</body>
+</html>
