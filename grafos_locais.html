@@ -109,12 +109,10 @@
 
     <body class="color-custom style-default layout-full-width header-plain header-fw minimalist-header sticky-header sticky-white ab-hide subheader-both-center menuo-last menuo-right mm-vertical mobile-tb-hide mobile-mini-mr-ll" style='position: relative;'> 
         <center>
-         <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
-
-            <img height="150" src="./images/semantic-cnpj.png"  alt=""/>
-            <h2>PORTAL SEMÂNTICO (SEMANTIC-CNPJ)</h2>
-            <!--<h3>Um Portal Semântico baseado em Ontologias e Dados Interligados no Acesso, Integração e Visualização de Dados da Secretaria da Fazenda do Estado do Maranhão</h3>-->
-        </section>
+        <div id="header" width="100%"/>
+            <script>
+                $( "#header" ).load( "header.html" );
+            </script>
 
         <div id="menu_portal" width="100%"/>
         <script>
@@ -180,7 +178,7 @@
                 <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
                     <div class="elementor-widget-container">
                        
-                            <h2 class="elementor-heading-title elementor-size-default">Grafos de Conhecimento Locais</h2>        
+                            <h2 class="elementor-heading-title elementor-size-default">Visões Exportadas</h2>        
                         
                     </div>
                 </div>
@@ -266,72 +264,11 @@
                                                     <a  class="card-link"></a>
                                                     <a href="#" class="btn btn-primary">Grafo</a>
                                                   </div>-->
+                                                </center>
                                                   
                                             </div>
 
-                                            <div class="card text-white  " style="max-width: 14rem; text-align: center;">
-                                                <div class="card-header bg-primary">Grafo Local <br>IBGE CNAE</div>
-                                                <div class="card-body">
-                                                    <figure>
-                                                        <center><img class="img-fluid" width="200" height="200" src = "images/Ibge.png"/></center>
-                                                    </figure>
-                                                </div>
-                                            
-                                                <ul class="list-group list-group-flush" align = "center">
-                                                    <li class="list-group-item">
-
-                                                    <a href="#" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ontologia</a>
-
-                                                                <div class="dropdown-menu">
-                                                                    <a class="dropdown-item" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20IBGE%20CNAE/Ontologia%20Local/Diagrama%20de%20Classes/Diagrama_Ontologia_IBGE_CNAE.drawio.svg">Diagrama de Classes</a>
-                                                                    <a class="dropdown-item" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20IBGE%20CNAE/Ontologia%20Local/OWL/IBGE_CNAE.ttll">Implementação OWL</a>
-                                                                    <a class="dropdown-item" href="https://semantic-sefaz.github.io/ontologias-parte-i/IBGE%20-%20CNAE/especifica%C3%A7%C3%A3o/index-pt.html">Especificação</a>
-                                                                </div>
-                                                           
-                                                       
-                                                    </li>
-                                                    <li class="list-group-item"><a href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20IBGE%20CNAE/Mapeamentos/IBGE_CNAE.ttl" class="btn btn-primary">Mapeamentos</a></li>
-                                                    <li class="list-group-item"><a href="ibge_cnae_fonte.html" class="btn btn-primary">Fonte de Dados</a></li>
-                                                  </ul>
-                                                  <center>
-                                                <!----  <div class="card-body" align = "center">
-                                                    <a  class="card-link"></a>
-                                                    <a href="#" class="btn btn-primary">Grafo</a>
-                                                  </div>-->
-                                                  
-                                            </div>
-
-                                            <div class="card text-white  " style="max-width: 14rem; text-align: center;">
-                                                <div class="card-header bg-primary">Grafo Local <br>IBGE Localização</div>
-                                                <div class="card-body">
-                                                    <figure>
-                                                        <center><img class="img-fluid" width="200" height="200" src = "images/IbgeLocation.png"/></center>
-                                                    </figure>
-                                                </div>
-                                            
-                                                <ul class="list-group list-group-flush" align = "center">
-                                                    <li class="list-group-item">
-
-                                                    <a href="#" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ontologia</a>
-
-                                                                <div class="dropdown-menu">
-                                                                    <a class="dropdown-item" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20IBGE%20Localizacao/Ontologia%20Local/Diagrama%20de%20Classes/Diagrama_Ontologia_Localizacao.drawio.svg">Diagrama de Classes</a>
-                                                                    <a class="dropdown-item" href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20IBGE%20Localizacao/Ontologia%20Local/OWL/IBGE_Localizacao.ttl">Implementação OWL</a>
-                                                                    <a class="dropdown-item" href="https://semantic-sefaz.github.io/ontologias-parte-i/IBGE%20-%20Location/especifica%C3%A7%C3%A3o/index-pt.html">Especificação</a>
-                                                                </div>
-                                                           
-                                                       
-                                                    </li>
-                                                    <li class="list-group-item"><a href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Semantica/Grafos%20de%20Conhecimento%20Locais/GCL%20IBGE%20Localizacao/Mapeamentos/IBGE_Localizacao.ttl" class="btn btn-primary">Mapeamentos</a></li>
-                                                    <li class="list-group-item"><a href="ibge_location_fonte.html" class="btn btn-primary">Fonte de Dados</a></li>
-                                                  </ul>
-                                                  <center>
-                                                <!----  <div class="card-body" align = "center">
-                                                    <a  class="card-link"></a>
-                                                    <a href="#" class="btn btn-primary">Grafo</a>
-                                                  </div>-->
-                                                  
-                                            </div>
+                    
 
                                     </div>
                                 </div>
@@ -370,91 +307,7 @@
         </div>
         </section>
 
-    </br></br>
-        <section class="elementor-element elementor-element-a42d2f0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a42d2f0" data-element_type="section">
-            <div class="elementor-container elementor-column-gap-default">
-                <div class="elementor-row">
-                    <div style="margin: 0 10% 0 10%" data-id="2462e4c" data-element_type="column">
-                        <div class="elementor-column-wrap  elementor-element-populated">
-                            <div class="elementor-element elementor-element-d7736ec elementor-widget elementor-widget-text-editor" data-id="d7736ec" data-element_type="widget" data-widget_type="text-editor.default">
-                                <div class="elementor-widget-container">
-                                    <div class="elementor-text-editor elementor-clearfix">
-
-                                        <div class="card-deck">
-
-                                            <div class="card text-white  " style="max-width: 14rem; text-align: center;">
-                                                <div class="card-header bg-primary">Grafo Local <br>TCU</div>
-                                                <div class="card-body">
-                                                    <figure>
-                                                        <center><img class="img-fluid" width="200" height="200" src = "images/tcu.PNG"/></center>
-                                                    </figure>
-                                                </div>
-                                            
-                                                <ul class="list-group list-group-flush" align = "center">
-                                                    <li class="list-group-item">
-
-                                                    <a href="#" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ontologia</a>
-
-                                                                <div class="dropdown-menu">
-                                                                    <a class="dropdown-item" href="https://viewer.diagrams.net/?page-id=Zhmr70E7Mxgs1-aFP05Y&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=Zhmr70E7Mxgs1-aFP05Y#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD">Diagrama de Classes</a>
-                                                                    <a class="dropdown-item" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/TCU/ontologia/ontologia_tcu.owl">Implementação OWL</a>
-                                                                    <a class="dropdown-item" href="#">Especificação</a>
-                                                                </div>
-                                                           
-                                                       
-                                                    </li>
-                                                    <li class="list-group-item"><a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/TCU/mapeamentos/mapeamentos_diretos_tcu.ttl" class="btn btn-primary">Mapeamentos</a></li>
-                                                    <li class="list-group-item"><a href="tcu_fonte.html" class="btn btn-primary">Fonte de Dados</a></li>
-                                                  </ul>
-                                                  <center>
-                                                  <div class="card-body" align = "center">
-                                                    <a  class="card-link"></a>
-                                                    <a href="#" class="btn btn-primary">Grafo</a>
-                                                  </div>
-                                                  
-                                            </div>
-
-                                            <div class="card text-white  " style="max-width: 14rem; text-align: center;">
-                                                <div class="card-header bg-primary">Grafo Local <br>CEIS</div>
-                                                <div class="card-body">
-                                                    <figure>
-                                                        <center><img class="img-fluid" width="200" height="200" src = "images/ceis.PNG"/></center>
-                                                    </figure>
-                                                </div>
-                                            
-                                                <ul class="list-group list-group-flush" align = "center">
-                                                    <li class="list-group-item">
-
-                                                    <a href="#" class="btn btn-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ontologia</a>
-
-                                                                <div class="dropdown-menu">
-                                                                    <a class="dropdown-item" href="https://viewer.diagrams.net/?page-id=nNylaChzyZpD_MNoYoE1&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=nNylaChzyZpD_MNoYoE1#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD">Diagrama de Classes</a>
-                                                                    <a class="dropdown-item" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEIS/ontologia/ontologia_ceis.owl">Implementação OWL</a>
-                                                                    <a class="dropdown-item" href="https://semantic-sefaz.github.io/sefazma-repository-main/ontologias-parte-ii/C115/Especifica%C3%A7%C3%A3o%20Ontologia%20C115/index-pt.html">Especificação</a>
-                                                                </div>
-                                                           
-                                                       
-                                                    </li>
-                                                    <li class="list-group-item"><a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEIS/mapeamentos/mapeamentos_diretos_ceis.ttl" class="btn btn-primary">Mapeamentos</a></li>
-                                                    <li class="list-group-item"><a href="ceis_fonte.html" class="btn btn-primary">Fonte de Dados</a></li>
-                                                  </ul>
-                                                  <center>
-                                                <!----  <div class="card-body" align = "center">
-                                                    <a  class="card-link"></a>
-                                                    <a href="#" class="btn btn-primary">Grafo</a>
-                                                  </div>-->
-                                                  
-                                            </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </div>
-        </section>
+    
 
 
 </center>
