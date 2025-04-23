@@ -1,0 +1,303 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dqv: <http://www.w3.org/ns/dqv#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX moa: <http://www.arida.ufc.br/ontologies/music#>
+PREFIX : <http://www.arida.ufc.br/VEKG#> 
+PREFIX ex: <http://www.arida.ufc.br/resource/metadata/>
+BASE <http://www.arida.ufc.br/resource/metadata/>
+
+<https://graphdb.arida.site/repositories/CASE_STUDY/rdf-graphs/KG_METADATA> {
+	
+
+# ARTIST - DBPEDIA
+	
+
+<< <http://dbpedia.org/resource/Stevie_Wonder> foaf:name "Stevie Wonder" >> :hasQualityAnnotation ex:TripleQA1.
+<< <http://dbpedia.org/resource/Stevie_Wonder> dc:description """Stevland Hardaway Morris, known professionally as Stevie Wonder...""" >> :hasQualityAnnotation ex:TripleQA2.
+<< <http://dbpedia.org/resource/Stevie_Wonder> foaf:made "Talking Book" >> :hasQualityAnnotation ex:TripleQA3.
+
+<http://dbpedia.org/resource/Stevie_Wonder> :hasQualityAnnotation ex:InstanceQA1.
+
+# --- TripleQA1: Inconsistência em propriedades únicas
+ex:TripleQA1 a :TripleQualityAnnotation ;
+    oa:hasBody "Inconsistência detectada: Propriedades definidas como únicas não devem possuir múltiplos valores." ;
+    dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM1, ex:QM2.
+
+ex:QM1 a dqv:QualityMeasurement;
+  	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "0.0"^^xsd:float .
+    
+ex:QM2 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+
+
+# --- TripleQA2: Tripla sem inconsistências
+ex:TripleQA2 a :TripleQualityAnnotation ;
+    oa:hasBody "Tripla consistente. Nenhuma inconsistência encontrada nas métricas ConsistencyMetric1 e ConsistencyMetric2." ;
+    dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM3, ex:QM4.
+
+ex:QM3 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+    
+ex:QM4 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+
+
+ex:TripleQA3 a :TripleQualityAnnotation ;
+    oa:hasBody "Inconsistência detectada: A propriedade definida como owl:ObjectProperty foi utilizada como owl:DatatypeProperty." ;
+    dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM5, ex:QM6.
+
+ex:QM5 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+    
+ex:QM6 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "0.0"^^xsd:float .
+
+
+# --- InstanceQA1: Avaliação geral da instância
+ex:InstanceQA1 a :InstanceQualityAnnotation ;
+    oa:hasBody "Instância com baixa qualidade devido a inconsistências identificadas nas triplas ex:TripleQA1 e ex:TripleQA3." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQA1, ex:TripleQA2, ex:TripleQA3 ;
+    dqv:computedOn <http://dbpedia.org/resource/Stevie_Wonder>.
+
+
+	#
+	# RECORD - DBPEDIA
+	#
+<< <http://dbpedia.org/resource/Talking_Book> dc:title """Talking Book""" >> :hasQualityAnnotation ex:TripleQA4.
+<< <http://dbpedia.org/resource/Talking_Book> moa:labelName <http://dbpedia.org/resource/Motown> >> :hasQualityAnnotation ex:TripleQA5.
+<< <http://dbpedia.org/resource/Talking_Book> dc:date "1972-10-28" >> :hasQualityAnnotation ex:TripleQA6.
+<< <http://dbpedia.org/resource/Talking_Book> mo:track <http://dbpedia.org/resource/You_Are_the_Sunshine_of_My_Life> >> :hasQualityAnnotation ex:TripleQA7.
+<< <http://dbpedia.org/resource/Talking_Book> mo:track <http://dbpedia.org/resource/Superstition_(song)> >> :hasQualityAnnotation ex:TripleQA8.
+<< <http://dbpedia.org/resource/Talking_Book> foaf:maker <http://dbpedia.org/resource/Stevie_Wonder> >> :hasQualityAnnotation ex:TripleQA9.
+
+<http://dbpedia.org/resource/Talking_Book> :hasQualityAnnotation ex:InstanceQA2.
+
+
+ex:TripleQA4 a :TripleQualityAnnotation ;
+	oa:hasBody "Tripla consistente. Nenhuma inconsistência encontrada nas métricas ConsistencyMetric1 e ConsistencyMetric2." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM7, ex:QM8 .
+
+ex:QM7 a dqv:QualityMeasurement;
+  	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+    
+ex:QM8 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+
+ex:TripleQA5 a :TripleQualityAnnotation ;
+	oa:hasBody "Inconsistência detectada: A propriedade definida como owl:ObjectProperty foi utilizada como owl:DatatypeProperty." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM9, ex:QM10 .
+
+ex:QM9 a dqv:QualityMeasurement;
+  	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+    
+ex:QM10 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "0.0"^^xsd:float .
+
+
+ex:TripleQA6 a :TripleQualityAnnotation ;
+	oa:hasBody "Inconsistência detectada: Campo de data no formato errado." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM11, ex:QM12, ex:QM13 .
+
+ex:QM11 a dqv:QualityMeasurement;
+  	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+    
+ex:QM12 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+
+ex:QM13 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric3>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+
+
+ex:TripleQA7 a :TripleQualityAnnotation ;
+	oa:hasBody "Tripla consistente. Nenhuma inconsistência encontrada nas métricas ConsistencyMetric1 e ConsistencyMetric2." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQ10 .
+
+ ex:TripleQA8 a :TripleQualityAnnotation ;
+	oa:hasBody "Tripla consistente. Nenhuma inconsistência encontrada nas métricas ConsistencyMetric1 e ConsistencyMetric2." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQ11 .
+
+ ex:TripleQA9 a :TripleQualityAnnotation ;
+	oa:hasBody "Instância com baixa qualidade devido a inconsistências identificadas nas triplas ex:TripleQA1 e ex:TripleQA3." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQ1 .
+
+# --- InstanceQA2: Avaliação geral da instância
+ex:InstanceQA2 a :InstanceQualityAnnotation ;
+	oa:hasBody "Instância com baixa qualidade devido a inconsistências identificadas nas triplas ex:TripleQA5 e ex:TripleQA6." ; ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQA4, ex:TripleQA5, ex:TripleQA6, ex:TripleQA7, ex:TripleQA8, ex:TripleQA9 .
+
+
+    #
+	# TRACKS - DBPEDIA
+	#
+
+
+
+<< <http://dbpedia.org/resource/You_Are_the_Sunshine_of_My_Life> dc:title """You Are the Sunshine of My Life""" >> :hasQualityAnnotation ex:TripleQA10.
+<< <http://dbpedia.org/resource/Superstition_(song)> dc:title """Superstition (song)""" >> :hasQualityAnnotation ex:TripleQA11.
+
+
+<http://dbpedia.org/resource/You_Are_the_Sunshine_of_My_Life> :hasQualityAnnotation ex:InstanceQA3.
+<http://dbpedia.org/resource/Superstition_(song)> :hasQualityAnnotation ex:InstanceQA4.
+
+
+ex:TripleQA5 a :TripleQualityAnnotation ;
+	oa:hasBody "Tripla consistente. Nenhuma inconsistência encontrada nas métricas ConsistencyMetric1 e ConsistencyMetric2." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM14, ex:QM15 .
+
+ex:QM14 a dqv:QualityMeasurement;
+  	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+    
+ex:QM15 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "0.0"^^xsd:float .
+
+
+ex:TripleQA6 a :TripleQualityAnnotation ;
+	oa:hasBody "Tripla consistente. Nenhuma inconsistência encontrada nas métricas ConsistencyMetric1 e ConsistencyMetric2." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:QM16, ex:QM17 .
+
+ex:QM16 a dqv:QualityMeasurement;
+  	dqv:isMeasurementOf <Metric/ConsistencyMetric1>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "1.0"^^xsd:float .
+    
+ex:QM17 a dqv:QualityMeasurement;
+	dqv:isMeasurementOf <Metric/ConsistencyMetric2>;
+    dqv:inDimension dqv:Consistency;
+    dqv:value "0.0"^^xsd:float .
+
+# --- InstanceQA3: Avaliação geral da instância
+ex:InstanceQA3 a :InstanceQualityAnnotation ;
+	oa:hasBody "Instância consistente. Nenhuma inconsistência encontrada nas triplas." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQA5 .
+
+# --- InstanceQA4: Avaliação geral da instância
+ex:InstanceQA4 a :InstanceQualityAnnotation ;
+	oa:hasBody "Instância consistente. Nenhuma inconsistência encontrada nas triplas." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQA6 .
+
+
+
+# --- ViewQA1: Avaliação geral da Exported View
+<EV/DBpedia> :hasQualityAnnotation ex:ViewQA1.
+ex:ViewQA1 a :ViewQualityAnnotation ;
+	oa:hasBody "View com algumas triplas com inconsistências." ;
+	dqv:inDimension dqv:Consistency;
+    dqv:derivedFrom ex:TripleQA1, ex:TripleQA2, ex:TripleQA3, ex:TripleQA4, ex:TripleQA5, ex:TripleQA6 .
+
+
+
+
+# --- Métrica 1: Verifica múltiplos valores em propriedades únicas
+<Metric/ConsistencyMetric1> a dqv:Metric ;
+    rdfs:label "Propriedades Únicas com Múltiplos Valores"@pt ;
+    rdfs:comment "Verifica se propriedades definidas como únicas possuem mais de um valor atribuído, violando restrições de unicidade."@pt ;
+    dqv:inDimension dqv:Consistency ;
+    dqv:expectedDataType xsd:float .
+    
+
+# --- Métrica 2: Verifica o uso correto de propriedades
+<Metric/ConsistencyMetric2> a dqv:Metric ;
+    rdfs:label "Validação de Tipo de Propriedade"@pt ;
+    rdfs:comment "Verifica se propriedades do tipo owl:ObjectProperty e owl:DatatypeProperty são utilizadas de acordo com sua definição. Por exemplo, uma owl:ObjectProperty não deve apontar para um literal."@pt ;
+    dqv:inDimension dqv:Consistency ;
+    dqv:expectedDataType xsd:float .
+
+# --- Métrica 3: Verifica se o formato do dados está correto
+<Metric/ConsistencyMetric3> a dqv:Metric ;
+    rdfs:label "Validação do formato do dado"@pt ;
+    rdfs:comment "Verifica se dado está formatado corretamente."@pt ;
+    dqv:inDimension dqv:Consistency ;
+    dqv:expectedDataType xsd:float .
+
+
+	################
+	# MUSIC BRAINZ #
+	################
+
+	
+
+########################
+### RECORD - DBPEDIA ###
+########################
+
+
+########################
+### TRACKS - DBPEDIA ###
+########################
+
+
+
+	####################
+	### MUSIC BRAINZ ###
+	####################
+
+	
+
+
+
+	###############
+	### SAME AS ###
+	###############
+	
+
+
+	########################
+	### UNIFICATION VIEW ###
+	########################
+	
+
+
+	####################
+	# FUSION VIEW #
+	####################
+
+}
