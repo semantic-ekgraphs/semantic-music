@@ -1,0 +1,50 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dqv: <http://www.w3.org/ns/dqv#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX moa: <http://www.arida.ufc.br/ontologies/music#>
+PREFIX vekg: <http://www.arida.ufc.br/VEKG#> 
+PREFIX ex: <http://www.arida.ufc.br/resource/metadata/CASE_STUDY/> 
+
+<https://graphdb.arida.site/repositories/CASE_STUDY/rdf-graphs/KG_DBpedia> {
+	
+####################
+### ARTISTAS     ###
+####################
+<http://dbpedia.org/resource/Stevie_Wonder> a mo:MusicArtist, moa:MusicArtist_DBpedia;
+   foaf:name """Stevie Wonder""";
+	foaf:homepage "http://www.steviewonder.net/";
+	dc:description """Stevland Hardaway Morris, known professionally as Stevie Wonder...""";
+	foaf:made "Talking Book";
+	rdfs:label "Stevie Wonder"@en
+.
+
+##################
+### GRAVAÇÕES  ###
+##################
+dbr:Talking_Book a mo:Record, moa:Record_DBpedia;
+	dc:title """Talking Book""";
+	foaf:homepage """https://www.discogs.com/master/87446-Stevie-Wonder-Talking-Book""";
+	moa:labelName "Motown";
+	dc:date "1972-10-28";
+	mo:track dbr:You_Are_the_Sunshine_of_My_Life, dbr:Superstition_song;
+	foaf:maker <http://dbpedia.org/resource/Stevie_Wonder>;
+	rdfs:label "Talking Book"@en
+.
+
+########################
+### TRACKS - DBPEDIA ###
+########################
+dbr:You_Are_the_Sunshine_of_My_Life a mo:Track, moa:Track_DBpedia;
+	dc:title """You Are the Sunshine of My Life""";
+	rdfs:label "dbr:t1";
+	dc:identifier 5553773
+.
+<http://dbpedia.org/resource/Superstition_(song)> a mo:Track, moa:Track_DBpedia;
+	dc:title """Superstition (song)""";
+	rdfs:label "dbr:t2"
+.
+}

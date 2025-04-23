@@ -1,0 +1,52 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dqv: <http://www.w3.org/ns/dqv#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX moa: <http://www.arida.ufc.br/ontologies/music#>
+PREFIX vekg: <http://www.arida.ufc.br/VEKG#> 
+PREFIX ex: <http://www.arida.ufc.br/resource/metadata/CASE_STUDY/> 
+
+<https://graphdb.arida.site/repositories/CASE_STUDY/rdf-graphs/KG_MusicBrainz> {
+	
+	####################
+	### ARTISTAS     ###
+	####################
+	<https://musicbrainz.org/artist/1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e> a mo:MusicArtist, moa:MusicArtist_MusicBrainz;
+      foaf:name """Stevie Wonder""";
+      foaf:homepage """http://www.steviewonder.net/""";
+      foaf:made <http://musicbrainz.org/release/31137e7a-dce1-4066-9c7a-05de177f1163>;
+      rdfs:label "Stevie Wonder"@en
+   .
+
+		
+	##################
+	### GRAVAÇÕES  ###
+	##################
+	<http://musicbrainz.org/release/31137e7a-dce1-4066-9c7a-05de177f1163> a mo:Record, moa:Record_MusicBrainz;
+      dc:title """Talking Book""";
+      moa:labelName "Tamla";
+      dc:date "1972-10-27";
+      mo:track <http://musicbrainz.org/track/9494f1e5-af86-4cb5-8641-f817cca50759>, <http://musicbrainz.org/track/1d9a8f3b-e7b7-44b0-a004-04bc62f9755b>;
+      foaf:maker <https://musicbrainz.org/artist/1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e>;
+      rdfs:label "Talking Book"
+   .
+
+	
+	###############
+	### TRACKS  ###
+	###############
+	<http://musicbrainz.org/track/9494f1e5-af86-4cb5-8641-f817cca50759> a mo:Track, moa:Track_MusicBrainz;
+      dc:title """You Are the Sunshine of My Life""";
+      mo:track_number 1;
+      rdfs:label "mbr:t1"
+   .
+	<http://musicbrainz.org/track/1d9a8f3b-e7b7-44b0-a004-04bc62f9755b> a mo:Track, moa:Track_MusicBrainz;
+      dc:title """Superstition""";
+      mo:track_number 6;
+      rdfs:label "mbr:t2"
+   .
+
+}
